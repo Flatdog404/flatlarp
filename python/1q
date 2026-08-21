@@ -1,0 +1,37 @@
+import random
+
+number=0
+
+print("Setup:")
+
+print("Randomness:")
+add_chance=input("Chance to add: ")
+subtract_chance=input("Chance to subtract: ")
+multiply_chance=input("Chance to multiply: ")
+divide_chance=input("Chance to divide: ")
+
+rand_range=add_chance+subtract_chance+multiply_chance+divide_chance
+
+print("Range:")
+add_min=input("Minimum to add: ")
+add_max=input("Maximum to add: ")
+subtract_min=input("Minimum to subtract: ")
+subtract_max=input("Maximum to subtract: ")
+multiply_min=input("Minimum to multiply: ")
+multiply_max=input("Maximum to multiply: ")
+divide_min=input("Minimum to divide: ")
+divide_max=input("Maximum to divide: ")
+
+while True:
+    rng=random.randint(1, rand_range)
+
+    if 1<=rng<=add_chance:
+        number+=random.randint(add_min, add_max)
+    elif add_chance<rng<=add_chance+subtract_chance:
+        number-=random.randint(subtract_min, subtract_max)
+    elif add_chance+subtract_chance<rng<=add_chance+subtract_chance+multiply_chance:
+        number*=random.ranint(multiply_min, multiply_max)
+    elif add_chance+subtract_chance+multiply_chance<rng<=add_chance+subtract_chance+multiply_chance+divide_chance:
+        number/=random.randint(divide_min, divide_max)
+
+    print(number)
