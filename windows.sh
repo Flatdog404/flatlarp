@@ -1,1 +1,1 @@
-/usr/bin/alacritty
+alacritty -e fish -c "cd ~/flatlarp/ ; ./windows.sh"
