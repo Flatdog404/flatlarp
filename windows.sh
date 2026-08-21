@@ -1,1 +1,1 @@
-alacritty -e fish -c "cd ~/flatlarp/ ; ./windows.sh"
+alacritty -e fish -c "fastfetch ; cd ~/flatlarp/ ; ./windows.sh"
